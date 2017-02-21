@@ -1,0 +1,6 @@
+kenisis_connect_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: KenisisConnectPHPBundle:Default:index }
+kenisis_connect_dmpprofile:
+    path:     /test
+    defaults: { _controller: KenisisConnectPHPBundle:DmpProfile:testMain }

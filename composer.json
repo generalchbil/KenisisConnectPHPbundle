@@ -1,0 +1,24 @@
+{
+    "name": "KenisisConnectPHP/KenisisConnectPHPBundle",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-0": {
+            "KenisisConnectPHP\\KenisisConnectPHPBundle\\": ""
+        }
+    },
+    "require": {
+      "aws/aws-sdk-php": "^3.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias" : {
+            "dev-master" : "1.0"
+        }
+
+    }
+}

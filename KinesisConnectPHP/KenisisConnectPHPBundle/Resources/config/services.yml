@@ -1,0 +1,25 @@
+parameters:
+    kenisis_connect.api_dragibus_url_profile: ''
+    kenisis_connect.api_dragibus_url_matching: ''
+    kenisis_connect.api_get_segments: ''
+    kenisis_connect.kinesis_stream_name: ''
+    kenisis_connect.aws.key: ''
+    kenisis_connect.aws.secret: ''
+    kenisis_connect.aws.region: ''
+    dmpProfile.services.class: KenisisConnectPHP\KenisisConnectPHPBundle\Services\DmpProfileService
+
+services:
+    kenisis_connect.service:
+        class: "%dmpProfile.services.class%"
+        arguments:
+          - @logger
+          - %kenisis_connect.api_dragibus_url_profile%
+          - %kenisis_connect.api_dragibus_url_matching%
+          - %kenisis_connect.api_get_segments%
+          - %kenisis_connect.kinesis_stream_name%
+          -
+            version: "latest"
+            region: "%kenisis_connect.aws.region%"
+            credentials:
+               key: "%kenisis_connect.aws.key%"
+               secret: "%kenisis_connect.aws.secret%"
